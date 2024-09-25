@@ -11,8 +11,10 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/simpleDB')
+// Connect to MongoDB Atlas
+const mongoURI = 'mongodb+srv://2k22cse115:Mzbxz8OilYFEmK5F@cluster0.mongodb.net/simpleDB?retryWrites=true&w=majority';
+
+mongoose.connect(mongoURI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("Error: " + err));
 
@@ -21,7 +23,7 @@ app.use(session({
   secret: '@123', // Change this to a strong secret key
   resave: false,
   saveUninitialized: false,
-  store: MongoStore.create({ mongoUrl: 'mongodb://localhost:27017/simpleDB' }),
+  store: MongoStore.create({ mongoUrl: mongoURI }),
   cookie: { secure: false, maxAge: 1000 * 60 * 30 } // Session expires after 30 minutes
 }));
 
