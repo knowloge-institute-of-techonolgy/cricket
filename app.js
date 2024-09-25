@@ -5,27 +5,31 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const path = require('path');
-require('dotenv').config(); // Load environment variables
+const dotenv = require('dotenv');
 
 const app = express();
+
+// Load environment variables
+dotenv.config();
 
 // Body-parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
-// Connect to MongoDB Atlas
-const mongoURI = process.env.MONGODB_URI;
-
-mongoose.connect(mongoURI)
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URL)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("Error: " + err));
 
 // Session middleware
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || '@123', // Change this to a strong secret key
   resave: false,
   saveUninitialized: false,
-  store: MongoStore.create({ mongoUrl: mongoURI }),
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_URL,
+    collectionName: 'sessions' // Optional: Specify a collection name
+  }),
   cookie: { secure: false, maxAge: 1000 * 60 * 30 } // Session expires after 30 minutes
 }));
 
