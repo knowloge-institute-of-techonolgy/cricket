@@ -44,10 +44,6 @@ XYZ-Cricket-Tournaments-Website/  # Repository
 2. **Open the website**:
    Open the `index.html` file in any modern browser (Google Chrome, Firefox, Safari, etc.) to view the website locally.
 
-3. **Live Demo**:
-   The live version of the website is hosted and can be accessed at:
-   [**Live Demo Link**](https://xyzcrickettournaments.netlify.app/)
-
 ---
 
 ## Hosting
@@ -55,26 +51,5 @@ XYZ-Cricket-Tournaments-Website/  # Repository
 The project has been hosted on Netlify. The live demo link is accessible to the public and meets the hosting requirements for the competition.
 
 ---
-
-## Submission Information
-
-This project is submitted for the **WebBuzz: Cricket-Themed Web Development Challenge** on [Unstop](https://unstop.com/hackathons/webbuzz-web-development-challenge-cyphersage-1148269).
-
----
-
-## License
-
-This project is open-source and licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-## Contact
-
-Feel free to reach out for any questions or assistance!
-
-Designed and Developed by Sutharsan S
-
-- **LinkedIn**: [Sutharsan S](https://www.linkedin.com/in/ssutharsan20/)
-- **Email**: [s.sutharsan.201104@gmail.com](mailto:s.sutharsan.201104@gmail.com)
 
 ---
