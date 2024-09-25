@@ -5,6 +5,8 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const path = require('path');
+require('dotenv').config(); // Load environment variables
+
 const app = express();
 
 // Body-parser middleware
@@ -12,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 // Connect to MongoDB Atlas
-const mongoURI = 'mongodb+srv://2k22cse115:Mzbxz8OilYFEmK5F@cluster0.mongodb.net/simpleDB?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGODB_URI;
 
 mongoose.connect(mongoURI)
   .then(() => console.log("Connected to MongoDB"))
@@ -20,7 +22,7 @@ mongoose.connect(mongoURI)
 
 // Session middleware
 app.use(session({
-  secret: '@123', // Change this to a strong secret key
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({ mongoUrl: mongoURI }),
