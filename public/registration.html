@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="language" content="English">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Cricket Tournaments - Join the Ultimate Cricket Tournament!</title>
+    <meta name="description" content="Join XYZ Cricket Tournaments to showcase your cricket team's talent and compete with the best in exciting formats like T20, 50 overs, and Blitz. Register now for a chance to win amazing prizes!">
+    <meta name="keywords" content="Cricket Tournament, XYZ Cricket, T20, 50 Overs, Blitz Tournament, Cricket Competition, Register, Prizes, Sports Event">
+    <meta name="author" content="Sutharsan S">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Trebuchet+MS:wght@400&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            background-color: #1E1F26;
+            color: #FFFFFF;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #FF5722;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 10px;
+            color: #777;
+        }
+
+        .registration-container {
+            background-color: #272A36; 
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .registration-container h2 {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+
+        .registration-container p {
+            font-size: 1.2rem;
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .registration-form {
+            background-color: #2D2F36;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 50px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .registration-form h2 {
+            font-size: 2rem;
+            color: #FF5722;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .registration-form label {
+            display: block;
+            text-align: left;
+            font-size: 1.1rem;
+            color: #FFDD57;
+            margin-bottom: 8px;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form select,
+        .registration-form input[type="tel"]{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1E1F26;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        .registration-form .button-container{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .registration-form .button{
+            margin-top: 20px;
+            justify-self: left;
+        }
+        .registration-form .button a{
+            text-decoration: none;
+        }
+        .registration-form button,
+        .registration-form .btn{
+            width: 20vw;
+            padding: 10px;
+            background-color: #FF5722;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: .5s ease-in-out
+        }
+
+        .registration-form button:hover,
+        .registration-form .btn:hover {
+            background-color: #FFD700;
+            color: #272A36;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .home-button:hover {
+            background-color: #45a049;
+        }
+
+        .home-button .material-symbols-outlined {
+            vertical-align: middle;
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .registration-container {
+                width: 90%;
+            }
+        }
+    </style>
+    <header class="main-header">
+        <h1>Welcome to Startup Pro Cricket Tournaments</h1>
+        <p>Join us for exciting cricket events and tournaments!</p>
+    </header>
+    <section class="registration-form">
+        <h2>Register for the Tournament</h2>
+        <form id="multi-step-form" method="post">
+            <div class="step" id="step1">
+                <h3>Step 1: Manager Info</h3>
+                <label for="name">Manager Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phoneno">Phone Number</label>
+                <input type="tel" id="phoneno" name="phoneno" required>
+                <div class="button-container">
+                    <div class="next">
+                        <button type="button" onclick="nextStep()">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="step" id="step2" style="display:none;">
+                <h3>Step 2: Team Info</h3>
+                <label for="team">Team Name</label>
+                <input type="text" id="team" name="team" required>
+                <label for="captain">Captain</label>
+                <input type="text" id="captain" name="captain" required>
+                <div class="button-container">
+                    <div class="back">
+                        <button type="button" onclick="prevStep()">Back</button>
+                    </div>
+                    <div class="next">
+                        <button type="button" onclick="nextStep()">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="step" id="step3" style="display:none;">
+                <h3>Step 3: Tournament Info</h3>
+                <label for="tournament">Tournament</label>
+                <select id="tournament" name="tournament" required>
+                    <option value="Inter-College Tournament">Inter-College Tournament</option>
+                    <option value="Premier League">Premier League</option>
+                    <option value="Blitz Tournament">Blitz Tournament</option>
+                </select>
+                <label for="match">Match</label>
+                <select id="match" name="match" required>
+                    <option value="50 Overs">50 Overs</option>
+                    <option value="20 Overs">20 Overs</option>
+                    <option value="10 Overs">10 Overs</option>
+                </select>
+                <div class="button-container">
+                    <div class="back">
+                        <button type="button" onclick="prevStep()">Back</button>
+                    </div>
+                    <div class="next">
+                        <button type="button" onclick="nextStep()">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="step" id="step4" style="display:none;">
+                <h3>Step 4: Confirm Details</h3>
+                <div id="confirmation"></div>
+                <div class="button-container">
+                    <div class="back">
+                        <button type="button" onclick="prevStep()">Back</button>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>  
+        <a href="index.html" class="home-button" style="position: fixed; top: 20px; right: 20px;">
+            <span class="material-symbols-outlined">home</span> Home
+        </a>
+                 
+    </section>
+    <footer>
+        <p>XYZ Cricket Tournaments</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

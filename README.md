@@ -26,13 +26,7 @@ This project was developed for the **WebBuzz: Cricket-Themed Web Development Cha
 ## File Structure
 
 ```
-XYZ-Cricket-Tournaments-Website/  # Repository
-├── index.html                    # Main HTML file
-├── style.css                     # CSS styles
-├── script.js                     # JavaScript file for functionality
-├── registration.html             # Registration Portal HTML file
-└── /images/                      # Folder containing images used in the website
-```
+
 
 ---
 
